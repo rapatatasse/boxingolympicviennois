@@ -74,8 +74,9 @@ const siteData = {
       { src: "images/photos/1000076834.jpg", alt: "Cours de boxe - Boxing Olympic Viennois" },
       { src: "images/photos/1000076835.jpg", alt: "Sparring encadré - Boxing Olympic Viennois" },
       { src: "images/photos/1000076836.jpg", alt: "Atelier technique - Boxing Olympic Viennois" },
-      { src: "images/photos/1000076837.jpg", alt: "Travail au sac - Boxing Olympic Viennois" },
-      { src: "images/photos/1000076838.jpg", alt: "Groupe d'entraînement - Boxing Olympic Viennois" }
+      { src: "images/photos/1000076837.jpg", alt: "Cours demo à Vienne - Boxing Olympic Viennois" },
+      { src: "images/photos/1000076838.jpg", alt: "Groupe d'entraînement - Boxing Olympic Viennois" },
+      { src: "images/photos/1000058276.jpg", alt: "Compétition - Boxing Olympic Viennois" }
     ],
     evenements: [
       { src: "images/photos/1000076692.jpg", alt: "Événement du club - Boxing Olympic Viennois" },
@@ -114,3 +115,5 @@ const siteData = {
     }
   ]
 };
+
+window.siteData = siteData;

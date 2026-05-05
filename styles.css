@@ -52,8 +52,8 @@ img{max-width:100%;display:block}
   color:var(--muted);
   font-size:14px;
 }
-.nav a:hover{color:var(--text); border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
-.nav a[aria-current="page"]{color:var(--text); border-color:rgba(225,29,46,.45); background:rgba(225,29,46,.10)}
+.nav a:hover{color:var(--text); border-color:rgba(255,255,255,.12); background:rgba(90, 1, 1, 0.497)}
+.nav a[aria-current="page"]{color:var(--text); border-color:rgba(225,29,46,.45); background:rgba(120, 1, 11, 0.468)}
 
 .hero{padding:48px 0 18px}
 .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:stretch}
@@ -124,8 +124,8 @@ img{max-width:100%;display:block}
 .card p{margin:0; color:var(--muted)}
 
 .card--accent{
-  background:linear-gradient(180deg, rgba(58,12,19,.70), rgba(42,11,16,.40));
-  border-color:rgba(225,29,46,.22);
+  background:linear-gradient(180deg, rgba(137, 9, 28, 0.7), rgba(182, 12, 40, 0.4));
+  border-color:rgba(137, 26, 35, 0.673);
 }
 .card--accent h2, .card--accent h3{color:var(--text)}
 .card--accent p{color:rgba(244,245,247,.84)}
@@ -140,6 +140,19 @@ img{max-width:100%;display:block}
  }
 
 .discipline-grid .card{grid-column: span 6}
+
+.disc-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.disc-tag{
+  display:inline-flex; align-items:center;
+  padding:8px 16px;
+  border-radius:999px;
+  border:1px solid rgba(225,29,46,.35);
+  background:rgba(225,29,46,.10);
+  color:var(--text);
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.01em;
+}
 
 .features .card{grid-column: span 4}
 
@@ -159,17 +172,99 @@ img{max-width:100%;display:block}
 
 .partners{display:grid; grid-template-columns:repeat(12, 1fr); gap:12px}
 .partner{grid-column:span 3; display:flex; flex-direction:column; gap:10px; padding:14px; border-radius:16px; border:1px solid var(--border); background:rgba(255,255,255,.03)}
-.partner img{width:100%; height:120px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.10)}
+.partner img{width:100%; height:240px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.10)}
 .partner strong{font-size:14px}
 .partner span{font-size:13px; color:var(--muted)}
 .partner:hover{border-color:rgba(225,29,46,.35)}
 
-.site-footer{margin-top:26px; border-top:1px solid var(--border); background:rgba(7,7,10,.70)}
-.footer-inner{display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; padding:24px 0}
-.footer-inner p{margin:0; color:var(--muted)}
-.footer-links{display:flex; flex-direction:column; gap:8px; align-items:flex-start}
-.footer-links a{color:var(--muted)}
-.footer-links a:hover{color:var(--text)}
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(6px);
+  z-index:3000;
+}
+.modal[aria-hidden="false"]{display:flex}
+.modal__dialog{
+  width:min(600px, 100%);
+  max-height:calc(100vh - 40px);
+  overflow:auto;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(15,16,22,.92);
+  box-shadow:var(--shadow);
+}
+.modal__top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 14px 10px;
+  border-bottom:1px solid var(--border);
+}
+.modal__title{font-weight:800}
+.modal__close{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  border-radius:12px;
+  padding:10px 12px;
+  cursor:pointer;
+}
+.modal__close:hover{background:rgba(255,255,255,.06)}
+.modal__body{padding:14px}
+.modal__img{width:100%; height:auto; border-radius:16px; border:1px solid rgba(255,255,255,.10)}
+.modal__actions{display:flex; gap:10px; flex-wrap:wrap; padding:0 14px 14px}
+
+.site-footer{margin-top:26px}
+
+.footer-cta{
+  background:linear-gradient(135deg, rgba(160,10,28,.95) 0%, rgba(90,5,15,.95) 100%);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(225,29,46,.25);
+}
+.footer-cta-inner{
+  display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  padding:22px 0;
+}
+.footer-cta strong{font-size:17px; display:block; margin-bottom:4px}
+.footer-cta span{font-size:13px; color:rgba(255,255,255,.72)}
+
+.footer-body{
+  background:linear-gradient(180deg, #0d0d13 0%, #070709 100%);
+  border-bottom:1px solid var(--border);
+  padding:42px 0 36px;
+}
+.footer-cols{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px}
+.footer-col-title{
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--red); font-weight:700; margin-bottom:14px;
+}
+.footer-logo{width:52px; height:52px; border-radius:14px; object-fit:cover; border:1px solid var(--border); margin-bottom:12px}
+.footer-col--brand strong{font-size:15px; letter-spacing:.04em; text-transform:uppercase; display:block; margin-bottom:6px}
+.footer-col--brand p{color:var(--muted); font-size:14px; margin:0}
+
+.footer-contact-row{display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; color:var(--muted); font-size:14px}
+.footer-contact-row svg{flex-shrink:0; color:var(--red); margin-top:2px}
+.footer-contact-row a{color:var(--text)}
+.footer-contact-row a:hover{color:var(--red2)}
+.footer-contact-row strong{color:var(--text)}
+
+.footer-socials{display:flex; flex-direction:column; gap:10px}
+.social-btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 16px; border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  color:var(--text); font-size:14px;
+}
+.social-btn:hover{border-color:rgba(225,29,46,.45); background:rgba(225,29,46,.08); color:var(--text)}
+
 .subfooter{padding:14px 0; color:var(--muted); font-size:13px; border-top:1px solid var(--border)}
 
 .notice{padding:14px 16px; border-radius:16px; border:1px dashed rgba(255,255,255,.20); background:rgba(255,255,255,.03); color:var(--muted)}
@@ -191,9 +286,11 @@ img{max-width:100%;display:block}
   .split{grid-template-columns:1fr}
   .gallery a{grid-column:span 6}
   .partner{grid-column:span 6}
-  .footer-inner{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr 1fr}
+  .footer-cta-inner{flex-direction:column; align-items:flex-start}
 }
 @media (max-width: 420px){
   .gallery a{grid-column:span 12}
   .partner{grid-column:span 12}
+  .footer-cols{grid-template-columns:1fr}
 }

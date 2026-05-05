@@ -30,7 +30,7 @@ function renderPricing(){
 function renderDisciplines(){
   const el = document.getElementById("disciplines");
   if(!el || !window.siteData) return;
-  el.innerHTML = siteData.disciplines.map(d => `<li>${escapeHtml(d)}</li>`).join("");
+  el.innerHTML = siteData.disciplines.map(d => `<span class="disc-tag">${escapeHtml(d)}</span>`).join("");
 }
 
 function renderDisciplineCards(){
@@ -63,7 +63,7 @@ function renderGallery(targetId, items){
     const alt = it.alt || "Photo";
     const caption = it.caption || "";
     return (
-      `<a href="${escapeHtml(it.src)}" target="_blank" rel="noopener">
+      `<a href="${escapeHtml(it.src)}" data-image="${escapeHtml(it.src)}" data-title="${escapeHtml(caption || alt)}">
         <img src="${escapeHtml(it.src)}" alt="${escapeHtml(alt)}" loading="lazy" />
         <div class="caption">${escapeHtml(caption || alt)}</div>
       </a>`
@@ -75,7 +75,7 @@ function renderPartners(){
   const root = document.getElementById("partners");
   if(!root || !window.siteData) return;
   root.innerHTML = siteData.partners.map((p) => (
-    `<a class="partner" href="${escapeHtml(p.url)}" target="_blank" rel="noopener">
+    `<a class="partner" href="${escapeHtml(p.url)}" target="_blank" rel="noopener" data-image="${escapeHtml(p.image)}" data-title="${escapeHtml(p.title)}" data-url="${escapeHtml(p.url)}">
       <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}" loading="lazy" />
       <div>
         <strong>${escapeHtml(p.title)}</strong>
@@ -83,6 +83,98 @@ function renderPartners(){
       </div>
     </a>`
   )).join("");
+}
+
+function ensurePartnerModal(){
+  let modal = document.getElementById("partnerModal");
+  if(modal) return modal;
+
+  modal = document.createElement("div");
+  modal.className = "modal";
+  modal.id = "partnerModal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="modal__dialog" role="document">
+      <div class="modal__top">
+        <div class="modal__title" id="partnerModalTitle">Partenaire</div>
+        <button class="modal__close" type="button" id="partnerModalClose">Fermer</button>
+      </div>
+      <div class="modal__body">
+        <img class="modal__img" id="partnerModalImg" alt="" />
+      </div>
+      <div class="modal__actions" id="partnerModalActions"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const closeBtn = document.getElementById("partnerModalClose");
+  closeBtn.addEventListener("click", closePartnerModal);
+  modal.addEventListener("click", (e) => {
+    if(e.target === modal) closePartnerModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape") closePartnerModal();
+  });
+
+  return modal;
+}
+
+function openPartnerModal({ image, title, url }){
+  const modal = ensurePartnerModal();
+
+  const titleEl = document.getElementById("partnerModalTitle");
+  const imgEl = document.getElementById("partnerModalImg");
+  const actions = document.getElementById("partnerModalActions");
+
+  titleEl.textContent = title || "Partenaire";
+  imgEl.src = image;
+  imgEl.alt = title || "Partenaire";
+
+  actions.innerHTML = "";
+  if(url && url !== "#"){
+    actions.innerHTML = `<a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Visiter le site</a>`;
+  }
+
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  const closeBtn = document.getElementById("partnerModalClose");
+  closeBtn.focus();
+}
+
+function closePartnerModal(){
+  const modal = document.getElementById("partnerModal");
+  if(!modal) return;
+  if(modal.getAttribute("aria-hidden") === "true") return;
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function attachImageModalHandlers(){
+  document.addEventListener("click", (e) => {
+    const a = e.target && e.target.closest ? e.target.closest("a[data-image]") : null;
+    if(!a) return;
+    const image = a.getAttribute("data-image");
+    const title = a.getAttribute("data-title") || "";
+    const url = a.getAttribute("data-url") || "";
+    if(!image) return;
+    e.preventDefault();
+    openPartnerModal({ image, title, url });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const a = e.target && e.target.closest ? e.target.closest("a[data-image]") : null;
+    if(!a) return;
+    if(e.key !== "Enter" && e.key !== " ") return;
+    const image = a.getAttribute("data-image");
+    const title = a.getAttribute("data-title") || "";
+    const url = a.getAttribute("data-url") || "";
+    if(!image) return;
+    e.preventDefault();
+    openPartnerModal({ image, title, url });
+  });
 }
 
 function renderContact(){
@@ -122,6 +214,7 @@ function init(){
     if(siteData.galleries?.evenements) renderGallery("galleryEvenements", siteData.galleries.evenements);
   }
   renderPartners();
+  attachImageModalHandlers();
 }
 
 document.addEventListener("DOMContentLoaded", init);

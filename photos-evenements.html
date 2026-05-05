@@ -43,7 +43,6 @@
     <section class="section">
       <div class="container">
         <h2>Galerie des cours</h2>
-        <p class="lead">Les photos sont pilotées par une array modifiable dans <code>site-data.js</code>.</p>
         <div class="gallery" id="galleryCours"></div>
       </div>
     </section>
@@ -51,7 +50,9 @@
     <section class="section">
       <div class="container">
         <h2>Galerie des événements</h2>
+        <!-- TODO: remplacer par les vraies images 
         <p class="lead">Ajoute/enlève des images facilement (et mets-les dans <code>/images</code>).</p>
+        -->
         <div class="gallery" id="galleryEvenements"></div>
       </div>
     </section>
@@ -73,21 +74,60 @@
   </main>
 
   <footer class="site-footer" id="contact">
-    <div class="container footer-inner">
-      <div>
-        <strong id="clubNameFooter">Boxing Olympic Viennois</strong>
-        <p>Club familial de sports de combat à Sainte-Colombe.</p>
-        <div class="meta-row" style="margin-top:12px">
-          <a class="pill" id="contactFacebook" href="#" target="_blank" rel="noopener"><strong>Facebook</strong><span>Page</span></a>
-          <a class="pill" id="contactInstagram" href="#" target="_blank" rel="noopener"><strong>Instagram</strong><span>À renseigner</span></a>
-        </div>
-      </div>
 
-      <div class="footer-links" aria-label="Contact">
-        <div><strong id="contactName">Sebastien GONZALEZ</strong></div>
-        <a id="contactPhone" href="tel:+33658355286">06 58 35 52 86</a>
-        <a id="contactEmail" href="mailto:sebastiengonzalez82@gmail.com">sebastiengonzalez82@gmail.com</a>
-        <div id="contactAddress"></div>
+    <div class="footer-cta">
+      <div class="container footer-cta-inner">
+        <div>
+          <strong>Rejoins le Boxing Olympic Viennois</strong>
+          <span>Séance d'essai 10 € · Dès 4 ans · Tous niveaux</span>
+        </div>
+        <a class="btn primary" href="mailto:sebastiengonzalez82@gmail.com">Nous contacter</a>
+      </div>
+    </div>
+
+    <div class="footer-body">
+      <div class="container footer-cols">
+
+        <div class="footer-col footer-col--brand">
+          <img src="images/logo.jpg" alt="Logo Boxing Olympic Viennois" class="footer-logo" />
+          <strong id="clubNameFooter">Boxing Olympic Viennois</strong>
+          <p>Club familial de sports de combat à Sainte-Colombe.</p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.72h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+            <a id="contactPhone" href="tel:+33658355286">06 58 35 52 86</a>
+          </div>
+          <div class="footer-contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a id="contactEmail" href="mailto:sebastiengonzalez82@gmail.com">sebastiengonzalez82@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div id="contactAddress">Verrière des Cordeliers<br>69560 Sainte-Colombe</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Réseaux sociaux</div>
+          <div class="footer-socials">
+            <a class="social-btn" id="contactFacebook" href="https://www.facebook.com/sebastien.gonzalez.7921" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a class="social-btn" id="contactInstagram" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+          <div class="footer-contact-row" style="margin-top:18px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <strong id="contactName">Sebastien GONZALEZ</strong>
+          </div>
+        </div>
+
       </div>
     </div>
 
