@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cours & Prof | Boxing Olympic Viennois</title>
+  <meta name="description" content="Cours, disciplines, tarifs et informations professeur du Boxing Olympic Viennois à Sainte-Colombe." />
+  <meta name="theme-color" content="#e11d2e" />
+
+  <meta property="og:title" content="Cours & Prof | Boxing Olympic Viennois" />
+  <meta property="og:description" content="Cours enfants, ados, adultes. Disciplines, tarifs et infos pratiques." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo.jpg" />
+
+  <link rel="icon" href="images/logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="site-data.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <img src="images/logo.jpg" alt="Logo Boxing Olympic Viennois" />
+        <div class="brand-title">
+          <strong id="clubName">Boxing Olympic Viennois</strong>
+          <span id="tagline">Club de boxe à Sainte-Colombe</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html" aria-current="page">Cours & Prof</a>
+        <a href="photos-evenements.html">Photos & Événements</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h2>Cours, disciplines & tarifs</h2>
+        <p class="lead">Des cours pour enfants dès 4 ans, ados et adultes. Débutants bienvenus.</p>
+        <div class="meta-row" id="pricing"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card">
+          <h2>Disciplines proposées</h2>
+          <p class="lead">Boxe anglaise, kick-boxing, boxe thaï… et plus.</p>
+          <div class="grid discipline-grid" id="disciplinesCards"></div>
+        </div>
+
+        <div class="card">
+          <h2>Espace professeur</h2>
+          <p class="lead">Présentation, diplômes, philosophie d’entraînement.</p>
+          <img class="prof-photo" src="images/sebastien.jpg" alt="Sebastien GONZALEZ - Professeur" loading="lazy" />
+          <div class="notice">
+            <div><strong>Coach</strong> : Sebastien GONZALEZ</div>
+            <div><strong>Approche</strong> : dépassement de soi, respect, esprit d’équipe</div>
+            <div><strong>Bio</strong> : placeholder à compléter (parcours, palmarès, diplômes)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card">
+          <h2>Horaires</h2>
+          <p class="lead">À compléter (jours, créneaux, niveaux).</p>
+          <div class="notice">Placeholder : tableau des horaires à fournir.</div>
+        </div>
+
+        <div class="card">
+          <h2>Inscription</h2>
+          <p class="lead">Documents nécessaires, modalités, essai.</p>
+          <div class="notice">
+            <div><strong>Séance d’essai</strong> : 10 € (déductible de la cotisation)</div>
+            <div><strong>Documents</strong> : placeholder (certificat médical, règlement, etc.)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <strong id="clubNameFooter">Boxing Olympic Viennois</strong>
+        <p>Club familial de sports de combat à Sainte-Colombe.</p>
+        <div class="meta-row" style="margin-top:12px">
+          <a class="pill" id="contactFacebook" href="#" target="_blank" rel="noopener"><strong>Facebook</strong><span>Page</span></a>
+          <a class="pill" id="contactInstagram" href="#" target="_blank" rel="noopener"><strong>Instagram</strong><span>À renseigner</span></a>
+        </div>
+      </div>
+
+      <div class="footer-links" aria-label="Contact">
+        <div><strong id="contactName">Sebastien GONZALEZ</strong></div>
+        <a id="contactPhone" href="tel:+33658355286">06 58 35 52 86</a>
+        <a id="contactEmail" href="mailto:sebastiengonzalez82@gmail.com">sebastiengonzalez82@gmail.com</a>
+        <div id="contactAddress"></div>
+      </div>
+    </div>
+
+    <div class="container subfooter">
+      <div>© <span id="year"></span> Boxing Olympic Viennois. Tous droits réservés.</div>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

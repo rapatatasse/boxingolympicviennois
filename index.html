@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boxing Olympic Viennois | Club de boxe à Sainte-Colombe</title>
+  <meta name="description" content="Boxing Olympic Viennois (BOV) : club familial de sports de combat à Sainte-Colombe. Cours enfants dès 4 ans, ados, adultes. Loisir, compétition, handi-boxe." />
+  <meta name="theme-color" content="#e11d2e" />
+
+  <meta property="og:title" content="Boxing Olympic Viennois" />
+  <meta property="og:description" content="Club familial de sports de combat à Sainte-Colombe. Cours enfants, ados, adultes. Loisir, compétition, handi-boxe." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo.jpg" />
+
+  <link rel="icon" href="images/logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="site-data.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <img src="images/logo.jpg" alt="Logo Boxing Olympic Viennois" />
+        <div class="brand-title">
+          <strong id="clubName">Boxing Olympic Viennois</strong>
+          <span id="tagline">Club de boxe à Sainte-Colombe</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="cours.html">Cours & Prof</a>
+        <a href="photos-evenements.html">Photos & Événements</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card hero-main">
+          <div class="kicker"><span class="dot"></span><span id="locationShort">Sainte-Colombe</span></div>
+          <h1>Deviens plus fort. Plus confiant. Ensemble.</h1>
+          <p>
+            Fondé en 2025, le <strong>Boxing Olympic Viennois</strong> est un club dynamique et familial.
+            Entraînements encadrés, ambiance conviviale, progression rapide.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="cours.html">Voir les cours</a>
+            <a class="btn" href="#contact">Nous contacter</a>
+          </div>
+          <div class="meta-row" id="pricing"></div>
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-card hero-media" aria-label="Photo du club">
+            <img src="images/index.jpg" alt="Boxing Olympic Viennois - Entraînement" />
+            <div class="hero-badges">
+              <div class="badge"><strong>Dès 4 ans</strong><span>enfants / ados / adultes</span></div>
+              <div class="badge"><strong>Essai</strong><span>10€ déductible</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Un club pour tous les niveaux</h2>
+        <p class="lead">
+          Débutant, loisir ou compétiteur : tu trouveras ta place. Nous proposons aussi une section handi-boxe
+          pour favoriser l’inclusion et l’accès au sport pour tous.
+        </p>
+
+        <div class="grid features" id="highlights"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card">
+          <h2>Disciplines</h2>
+          <p class="lead">Un mix complet pour progresser, transpirer et te dépasser.</p>
+          <ul class="list" id="disciplines"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Infos pratiques</h2>
+          <p class="lead">Lieu, accès, essai, inscriptions.</p>
+          <div class="notice">
+            <div><strong>Lieu</strong> : Verrière des Cordeliers à Sainte-Colombe</div>
+            <div><strong>Accès</strong> : Parking disponible</div>
+            <div><strong>Inscription</strong> : Placeholders à compléter (documents, horaires)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Partenaires</h2>
+        <p class="lead">Tu peux modifier facilement la liste des partenaires dans <code>site-data.js</code>.</p>
+        <div class="partners" id="partners"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <strong id="clubNameFooter">Boxing Olympic Viennois</strong>
+        <p>Club familial de sports de combat à Sainte-Colombe.</p>
+        <div class="meta-row" style="margin-top:12px">
+          <a class="pill" id="contactFacebook" href="#" target="_blank" rel="noopener"><strong>Facebook</strong><span>Page</span></a>
+          <a class="pill" id="contactInstagram" href="#" target="_blank" rel="noopener"><strong>Instagram</strong><span>À renseigner</span></a>
+        </div>
+      </div>
+
+      <div class="footer-links" aria-label="Contact">
+        <div><strong id="contactName">Sebastien GONZALEZ</strong></div>
+        <a id="contactPhone" href="tel:+33658355286">06 58 35 52 86</a>
+        <a id="contactEmail" href="mailto:sebastiengonzalez82@gmail.com">sebastiengonzalez82@gmail.com</a>
+        <div id="contactAddress"></div>
+      </div>
+    </div>
+
+    <div class="container subfooter">
+      <div>© <span id="year"></span> Boxing Olympic Viennois. Tous droits réservés.</div>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
