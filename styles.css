@@ -207,7 +207,7 @@ img{max-width:100%;display:block}
 .schedule__cell--combat  {background:#a855f7; color:#fffdff}
 .schedule__cell--ladies  {background:#ec4899; color:#fffdff}
 .schedule__cell--adults  {background:#0ea5e9; color:#fffdff}
-.schedule__cell--coaching{background:rgba(67, 107, 162, 0.774); fffdff; font-style:italic; border:1px solid rgba(148,163,184,.20)}
+.schedule__cell--coaching{background:rgba(67, 107, 162, 0.774); color:#fffdff; font-style:italic; border:1px solid rgba(148,163,184,.20)}
 
 .split{display:grid; grid-template-columns: 1fr 1fr; gap:16px; align-items:start}
 .list{margin:0; padding-left:18px; color:var(--muted)}

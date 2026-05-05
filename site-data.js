@@ -70,21 +70,27 @@ const siteData = {
 
   galleries: {
     cours: [
+      { src: "images/photos/1000058824.jpg", alt: "Entraînement - Boxing Olympic Viennois" },
       { src: "images/photos/1000076833.jpg", alt: "Entraînement - Boxing Olympic Viennois" },
       { src: "images/photos/1000076834.jpg", alt: "Cours de boxe - Boxing Olympic Viennois" },
       { src: "images/photos/1000076835.jpg", alt: "Sparring encadré - Boxing Olympic Viennois" },
       { src: "images/photos/1000076836.jpg", alt: "Atelier technique - Boxing Olympic Viennois" },
       { src: "images/photos/1000076837.jpg", alt: "Cours demo à Vienne - Boxing Olympic Viennois" },
       { src: "images/photos/1000076838.jpg", alt: "Groupe d'entraînement - Boxing Olympic Viennois" },
-      { src: "images/photos/1000058276.jpg", alt: "Compétition - Boxing Olympic Viennois" }
+      { src: "images/photos/1000076836.jpg", alt: "Cours en école - Boxing Olympic Viennois" }
     ],
     evenements: [
       { src: "images/photos/1000076692.jpg", alt: "Événement du club - Boxing Olympic Viennois" },
       { src: "images/photos/1000076693.jpg", alt: "Gala / compétition - Boxing Olympic Viennois" },
       { src: "images/photos/1000066819.jpg", alt: "Sortie club - Boxing Olympic Viennois" },
       { src: "images/photos/1000065338.jpg", alt: "Compétition - Boxing Olympic Viennois" },
+      { src: "images/photos/1000058276.jpg", alt: "Compétition - Boxing Olympic Viennois" },
       { src: "images/photos/1000058635.jpg", alt: "Moment club - Boxing Olympic Viennois" },
-      { src: "images/photos/1000059643.jpg", alt: "Team BOV - Boxing Olympic Viennois" }
+      { src: "images/photos/1000065549.jpg", alt: "Compétition - Boxing Olympic Viennois" },
+      { src: "images/photos/1000059643.jpg", alt: "Team BOV - Boxing Olympic Viennois" },
+      { src: "images/photos/1000067763.jpg", alt: "Match - Boxing Olympic Viennois" },
+      { src: "images/photos/1000058278.jpg", alt: "Match - Boxing Olympic Viennois" },
+      { src: "images/photos/1000072132.jpg", alt: "Remise de brevet - Boxing Olympic Viennois" },
     ]
   },
 
