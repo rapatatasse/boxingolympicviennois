@@ -156,6 +156,59 @@ img{max-width:100%;display:block}
 
 .features .card{grid-column: span 4}
 
+.schedule-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:16px; border:1px solid var(--border)}
+.schedule{
+  width:100%; border-collapse:collapse; min-width:560px;
+}
+.schedule thead th{
+  background:rgba(255, 224, 224, 0.867);
+  color:#ca1717;
+  font-style:italic;
+  font-weight:800;
+  padding:13px 16px;
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-size:14px;
+}
+.schedule__time-col{width:70px}
+.schedule thead th:first-child{background:rgba(0,0,0,.55); width:70px}
+.schedule__time{
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+  text-align:right;
+  padding:0px 14px 14px;
+  white-space:nowrap;
+  background:rgba(0,0,0,.35);
+  vertical-align:top;
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.schedule__cell{
+  padding:16px 12px;
+  text-align:center;
+  font-weight:700;
+  font-size:13px;
+  border:1px solid rgba(0,0,0,.20);
+  vertical-align:middle;
+  line-height:1.45;
+}
+.schedule__cell em{
+  font-weight:400;
+  font-style:normal;
+  display:block;
+  font-size:12px;
+  margin-top:4px;
+  opacity:.85;
+}
+.schedule__end{border-top:2px solid var(--border); height:6px; background:rgba(0,0,0,.25)}
+.schedule__cell--kids    {background:#f97316; color:#fffdff}
+.schedule__cell--combat  {background:#a855f7; color:#fffdff}
+.schedule__cell--ladies  {background:#ec4899; color:#fffdff}
+.schedule__cell--adults  {background:#0ea5e9; color:#fffdff}
+.schedule__cell--coaching{background:rgba(67, 107, 162, 0.774); fffdff; font-style:italic; border:1px solid rgba(148,163,184,.20)}
+
 .split{display:grid; grid-template-columns: 1fr 1fr; gap:16px; align-items:start}
 .list{margin:0; padding-left:18px; color:var(--muted)}
 .list li{margin:8px 0}
