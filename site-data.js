@@ -96,28 +96,46 @@ const siteData = {
 
   partners: [
     {
-      title: "Partenaire 1",
-      text: "Texte partenaire (placeholder)",
+      title: "Carroserie MG",
+      text: "",
       url: "#",
       image: "images/partenaires/1000074436.jpg"
     },
     {
-      title: "Partenaire 2",
-      text: "Texte partenaire (placeholder)",
+      title: "Dauphiné Rhône Alpes Isolation",
+      text: "",
       url: "#",
       image: "images/partenaires/1000074437.jpg"
     },
     {
-      title: "Partenaire 3",
-      text: "Texte partenaire (placeholder)",
+      title: "Papaléo",
+      text: "",
       url: "#",
       image: "images/partenaires/1000074438.jpg"
     },
     {
-      title: "Partenaire 4",
-      text: "Texte partenaire (placeholder)",
+      title: "La Baraque Huitres",
+      text: "",
       url: "#",
       image: "images/partenaires/1000074439.jpg"
+    },
+    {
+      title: "Le Spécial",
+      text: "",
+      url: "#",
+      image: "images/partenaires/1000074440.jpg"
+    },
+    {
+      title: "Le Marcchiato",
+      text: "",
+      url: "#",
+      image: "images/partenaires/1000074441.jpg"
+    },
+    {
+      title: "Boulangerie Paul",
+      text: "",
+      url: "#",
+      image: "images/partenaires/1000074442.jpg"
     }
   ]
 };
