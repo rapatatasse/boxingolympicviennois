@@ -150,6 +150,50 @@ img{max-width:100%;display:block}
 
 .discipline-grid .card{grid-column: span 6}
 
+.palmares{
+  margin-top:28px;
+  padding:24px 28px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(225,29,46,.10) 0%, rgba(42,11,16,.55) 100%);
+  border:1px solid rgba(225,29,46,.28);
+}
+.palmares-header{margin-bottom:14px}
+.palmares-season{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--red); font-weight:700}
+.palmares-header h3{margin:4px 0 0; font-size:20px; font-weight:800; color:var(--text)}
+.palmares-hero{display:flex; align-items:baseline; gap:12px; margin-bottom:20px}
+.palmares-big{font-size:76px; font-weight:900; color:var(--red); line-height:1}
+.palmares-big-label{font-size:15px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+.palmares-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px}
+.palmares-stat{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  padding:16px 10px;
+  text-align:center;
+}
+.palmares-num{display:block; font-size:38px; font-weight:900; color:var(--red2); line-height:1; margin-bottom:6px}
+.palmares-desc{font-size:12px; color:var(--muted); line-height:1.45}
+.palmares-callout{
+  display:flex; align-items:center; gap:12px;
+  padding:14px 18px;
+  border-radius:14px;
+  background:rgba(225,29,46,.15);
+  border:1px solid rgba(225,29,46,.35);
+  font-size:14px; font-weight:600; color:var(--text);
+}
+
+.diplomes{margin-top:20px; padding-top:18px; border-top:1px solid rgba(255,255,255,.10)}
+.diplomes-label{font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); font-weight:700; margin:0 0 10px}
+.diplomes-row{display:flex; gap:10px; flex-wrap:wrap}
+.diplome-link{
+  display:block; border-radius:10px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  transition:border-color .2s, transform .2s;
+  flex:1; min-width:80px; max-width:130px;
+}
+.diplome-link:hover{border-color:var(--red); transform:scale(1.03)}
+.diplome-link img{width:100%; height:90px; object-fit:cover; display:block}
+
 .disc-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
 .disc-tag{
   display:inline-flex; align-items:center;
@@ -361,6 +405,8 @@ img{max-width:100%;display:block}
   .prof-layout{grid-template-columns:1fr}
   .cours-intro{flex-direction:column}
   .cours-intro-photo{width:100%; height:220px}
+  .palmares-grid{grid-template-columns:repeat(2,1fr)}
+  .palmares-big{font-size:56px}
 }
 @media (max-width: 420px){
   .gallery a{grid-column:span 12}
