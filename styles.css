@@ -182,6 +182,11 @@ img{max-width:100%;display:block}
   font-size:14px; font-weight:600; color:var(--text);
 }
 
+.interv-photos{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px}
+.interv-photos a{display:block; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.12); transition:border-color .2s, transform .2s}
+.interv-photos a:hover{border-color:var(--red); transform:scale(1.02)}
+.interv-photos img{width:100%; height:250px; object-fit:contain; display:block; background:rgba(255,255,255,.04)}
+
 .diplomes{margin-top:20px; padding-top:18px; border-top:1px solid rgba(255,255,255,.10)}
 .diplomes-label{font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); font-weight:700; margin:0 0 10px}
 .diplomes-row{display:flex; gap:10px; flex-wrap:wrap}
@@ -272,13 +277,13 @@ img{max-width:100%;display:block}
 
 .gallery{display:grid; grid-template-columns:repeat(12, 1fr); gap:12px}
 .gallery a{grid-column:span 3; border-radius:16px; overflow:hidden; border:1px solid var(--border); background:rgba(255,255,255,.03)}
-.gallery img{width:100%; height:190px; object-fit:cover; transition:transform .25s ease}
+.gallery img{width:100%; height:190px; object-fit:cover; object-position:top; transition:transform .25s ease}
 .gallery a:hover img{transform:scale(1.04)}
 .gallery .caption{padding:10px 12px; color:var(--muted); font-size:13px}
 
 .partners{display:grid; grid-template-columns:repeat(12, 1fr); gap:12px}
 .partner{grid-column:span 3; display:flex; flex-direction:column; gap:10px; padding:14px; border-radius:16px; border:1px solid var(--border); background:rgba(255,255,255,.03)}
-.partner img{width:100%; height:240px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.10)}
+.partner img{width:100%; height:250px; object-fit:contain; border-radius:12px; border:1px solid rgba(255,255,255,.10)}
 .partner strong{font-size:14px}
 .partner span{font-size:13px; color:var(--muted)}
 .partner:hover{border-color:rgba(225,29,46,.35)}

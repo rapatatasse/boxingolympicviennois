@@ -91,6 +91,10 @@ const siteData = {
       { src: "images/photos/1000067763.jpg", alt: "Match - Boxing Olympic Viennois" },
       { src: "images/photos/1000058278.jpg", alt: "Match - Boxing Olympic Viennois" },
       { src: "images/photos/1000072132.jpg", alt: "Remise de brevet - Boxing Olympic Viennois" },
+    ],
+    actualites: [
+      { src: "images/photos/Leonardo.jpg", alt: "Leonardo vice champion de France 2026 bea catégorie minimes plus de 76 kg" }
+
     ]
   },
 
@@ -136,7 +140,20 @@ const siteData = {
       text: "",
       url: "#",
       image: "images/partenaires/1000074442.jpg"
+    },
+    {
+      title: "BG AUTOMOBILE",
+      text: "",
+      url: "#",
+      image: "images/partenaires/1000078342.jpg"
+    },
+    {
+      title: "ENT ARSLAN",
+      text: "",
+      url: "#",
+      image: "images/partenaires/1000077728.jpg"
     }
+
   ]
 };
 

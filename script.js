@@ -212,6 +212,7 @@ function init(){
   if(window.siteData){
     if(siteData.galleries?.cours) renderGallery("galleryCours", siteData.galleries.cours);
     if(siteData.galleries?.evenements) renderGallery("galleryEvenements", siteData.galleries.evenements);
+    if(siteData.galleries?.actualites) renderGallery("galleryActualites", siteData.galleries.actualites);
   }
   renderPartners();
   attachImageModalHandlers();
