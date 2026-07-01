@@ -16,8 +16,8 @@ const siteData = {
     instagramUrl: "#"
   },
   pricing: [
-    { label: "Enfants", value: "180 € / an" },
-    { label: "Ados & Adultes", value: "220 € / an" },
+    { label: "Enfants", value: "220 € / an" },
+    { label: "Ados & Adultes", value: "260 € / an" },
     { label: "Séance d'essai", value: "10 € (déductible)" }
   ],
   disciplines: [
