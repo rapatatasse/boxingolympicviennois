@@ -152,6 +152,12 @@ const siteData = {
       text: "",
       url: "#",
       image: "images/partenaires/1000077728.jpg"
+    },
+      {
+      title: "Platon Formation",
+      text: "",
+      url: "https://www.platonformation.com",
+      image: "images/partenaires/1000078343.jpg"
     }
 
   ]
